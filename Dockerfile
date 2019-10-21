@@ -2,9 +2,11 @@
 # Build stage
 #
 FROM maven:3.6.0-jdk-11-slim AS build
+ARG MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
+ENV MAVEN_OPTS="${MAVEN_OPTS}"
 COPY src /home/app/src
 COPY pom.xml /home/app
-RUN mvn -f /home/app/pom.xml clean package -Dmaven.artifact.threads=20 -XX:+TieredCompilation -XX:TieredStopAtLevel=1
+RUN mvn -f /home/app/pom.xml clean package -Dmaven.artifact.threads=20
 
 #
 # Package stage
