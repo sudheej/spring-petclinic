@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.springframework.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
-  <version>2.1.0.BUILD-SNAPSHOT</version>
+  <version>0.0.1</version>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -112,6 +110,19 @@
 
   <build>
     <plugins>
+
+          <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>3.0.0-M1</version>
+          <configuration>
+    <checkModificationExcludes>
+        <checkModificationExclude>pom.xml</checkModificationExclude>
+    </checkModificationExcludes>
+  </configuration>
+      </plugin>
+
+
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
@@ -255,5 +266,10 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
+
+  <scm>
+    <developerConnection>scm:git:https://github.com/sudheej/spring-petclinic.git</developerConnection>
+    <tag>spring-petclinic-0.0.1</tag>
+  </scm>
 
 </project>
