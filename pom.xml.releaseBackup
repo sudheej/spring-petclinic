@@ -117,7 +117,8 @@
         <version>3.0.0-M1</version>
           <configuration>
           <goals>install</goals>
-
+          <localChanges>true</localChanges>
+          <pushChanges>false</pushChanges>
     <checkModificationExcludes>
         <checkModificationExclude>pom.xml</checkModificationExclude>
     </checkModificationExcludes>
@@ -271,7 +272,7 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/sudheej/spring-petclinic.git</developerConnection>
-    <tag>RELEASE-${project.version}</tag>
+    <tag>spring-petclinic-0.0.1</tag>
   </scm>
 
 </project>
