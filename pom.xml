@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.springframework.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
-  <version>0.0.5-SNAPSHOT</version>
+  <version>0.0.5</version>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -117,7 +117,7 @@
         <version>3.0.0-M1</version>
           <configuration>
           <preparationGoals>validate</preparationGoals>
-          <localChanges>true</localChanges>
+          <localChanges>false</localChanges>
           <pushChanges>false</pushChanges>
           <goals>install</goals>
 
@@ -274,7 +274,7 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/sudheej/spring-petclinic.git</developerConnection>
-    <tag>spring-petclinic-0.0.2</tag>
+    <tag>spring-petclinic-0.0.5</tag>
   </scm>
 
 </project>
